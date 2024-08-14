@@ -1,0 +1,64 @@
+{% extends "nav.html" %}
+{% block content %}
+
+{% load static %}
+
+    <!-- ***** Main Banner Area Start ***** -->
+    <div class="page-heading about-page-heading" id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="inner-content">
+                        <h2>Login!</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Main Banner Area End ***** -->
+
+    <!-- ***** Contact Area Starts ***** -->
+    <div class="contact-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <form id="contact" method="post">
+                        {% csrf_token %}
+                        <div>
+                          <div class="col-lg-6 mt-3">
+                            <input name="Item_Weight" type="text" placeholder="Item_Weight:{{Item_Weight}}" required="">
+                          </div>
+                          <div class="col-lg-6 mt-3">
+                            <input name="Item_Fat_Content" type="text" placeholder="Item_Fat_Content:{{Item_Fat_Content}}" required="">
+                          </div>
+                          <div class="col-lg-6 mt-3">
+                            <input name="Item_Visibility" type="text" placeholder="Item_Visibility:{{Item_Visibility}}" required="">
+                          </div>
+                          <div class="col-lg-6 mt-3">
+                            <input name="Item_Type" type="text" placeholder="Item_Type:{{Item_Type}}" required="">
+                          </div>
+                          <div class="col-lg-6 mt-3">
+                            <input name="Item_MRP" type="text" placeholder="Item_MRP:{{Item_MRP}}" required="">
+                          </div>
+                          <div class="col-lg-6 mt-3">
+                            <input name="Outlet_Size" type="text" placeholder="Outlet_Size:{{Outlet_Size}}" required="">
+                          </div>
+                          <div class="col-lg-6 mt-3">
+                            <input name="prediction" type="text" placeholder="Prediction:{{prediction}}" required="">
+                          </div>
+                          <div class="col-lg-12 mt-3 mt-3">
+                              <button type="submit" id="form-submit" class="main-dark-button" style="width: auto;">Predict</button>
+                          </div>
+                        </div>
+                      </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Contact Area Ends ***** -->
+    {% for i in messages %}
+    <script>alert("{{i}}")</script>
+    {% endfor %}
+
+    {% include "footer.html" %}    
+    {% endblock %}

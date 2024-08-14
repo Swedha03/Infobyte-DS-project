@@ -1,0 +1,28 @@
+{% extends "nav.html" %}
+{% block content %}
+
+  
+{% load static %}
+<div id="about" class="about">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-xl-5 col-lg-5 col-md-5 co-sm-l2">
+                <div class="about_box">
+                    <h2>Classifying the Iris species <br><strong class="black">Blossom Iris</strong></h2>
+                        <p>There are over 250 species in the genus Iris, each with its unique characteristics. 
+                            The most familiar type is the tall bearded iris Iris germanica, which grows to 2-3 feet tall.These irises have six-petaled flowers with three outer 
+                            hanging petals and three inner upright petals . Irises can be either bearded 
+                            (with soft hairs along the center of the falls) or crested (with a comb-like ridge on the falls). </p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+            <div class="col-xl-7 col-lg-7 col-md-7 co-sm-l2">
+                <div class="about_img">
+                    <figure><img src="{% static 'images/iris2.png' %}" alt="img" /></figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

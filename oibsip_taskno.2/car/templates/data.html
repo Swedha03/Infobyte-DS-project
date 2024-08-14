@@ -1,0 +1,206 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+        
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <meta content="Free HTML Templates" name="keywords" />
+        <meta content="Free HTML Templates" name="description" />
+
+        <!-- Favicon -->
+        <link href="{% static 'img/favicon.ico' %}" rel="icon" />
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Rubik&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Font Awesome -->
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
+            rel="stylesheet"
+        />
+
+        <!-- Libraries Stylesheet -->
+        <link
+            href="lib/owlcarousel/assets/owl.carousel.min.css"
+            rel="stylesheet"
+        />
+        <link
+            href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
+            rel="stylesheet"
+        />
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
+
+        <!-- Template Stylesheet -->
+        <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+        <style>
+            .input{
+            margin-top: 120px;
+            margin-left: 700px; 
+            height: 80px; 
+            width: 150px;
+        }
+        
+        </style>
+        <title>Car Price Prediction</title>
+    </head>
+ 
+
+    <body>
+        <!-- Topbar Start -->
+        <div class="container-fluid bg-dark py-3 px-lg-5 d-none d-lg-block">
+            <div class="row">
+                <div class="col-md-6 text-center text-lg-left mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center">
+                        <a style="color: white;" href=""
+                            ><i style="color: white;"class="fa fa-phone-alt mr-2"></i>+012 345
+                            6789</a
+                        >
+                        <span class="text-body">|</span>
+                        <a style="color: white;" href=""
+                            ><i style="color: white;"class="fa fa-envelope mr-2"></i
+                            >info@example.com</a
+                        >
+                    </div>
+                </div>
+                <div class="col-md-6 text-center text-lg-right">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-body px-3" href="">
+                            <i style="color: white;"class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="text-body px-3" href="">
+                            <i style="color: white;"class="fab fa-twitter"></i>
+                        </a>
+                        <a class="text-body px-3" href="">
+                            <i style="color: white;" class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="text-body px-3" href="">
+                            <i style="color: white;"class="fab fa-instagram"></i>
+                        </a>
+                        <a class="text-body pl-3" href="">
+                            <i style="color: white;"class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+ <!-- Navbar Start -->
+ <div class="container-fluid position-relative nav-bar p-0">
+    <div class="position-relative px-lg-5" style="z-index: 9">
+        <nav
+            class="navbar navbar-expand-lg bg-secondary navbar-dark py-3 py-lg-0 pl-3 pl-lg-5">
+            <a href="" class="navbar-brand">
+                <h1 style="color: white;">
+                    Royal Cars
+                </h1>
+            </a>
+            <button
+                type="button"
+                class="navbar-toggler"
+                data-toggle="collapse"
+                data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+                class="collapse navbar-collapse justify-content-between px-3"
+                id="navbarCollapse" >
+                <div class="navbar-nav ml-auto py-0">
+                    <a href="index" class="nav-item nav-link active">Home</a >
+                    <a href="about" class="nav-item nav-link">About</a>
+                    
+                    <div class="nav-item">
+                        <a href="data" class="nav-link toggle">Cars</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+<!-- Navbar End -->
+        
+
+    <div class="input">
+        <h2 style="margin: top 0;;margin-left: 80px;"   class="display-5 text-uppercase text-center "> Car  details</h2>
+    <form method="post">
+        {% csrf_token %} 
+        
+        <div>
+            <label for="brand" style="font-size: large;"><b>Brand:</b></label>
+            <select style="height: 50px; width: 250px;margin-bottom: 20px;border-radius: 10px;box-shadow: 5px 5px 5px rgb(67, 76, 92);border: none;" id="brand" name="brand" required>
+                <option value="">Select a brand</option>
+                <option value="Toyota">Toyota</option>
+                <option value="Honda">Honda</option>
+                <option value="Chevrolet">Chevrolet</option>
+                <option value="Audi">Audi</option>
+                <option value="BMW">BMW</option>
+                <option value="Mercedes">Mercedes</option>
+                <option value="Volkswagen">Volkswagen</option>
+                <option value="Nissan">Nissan</option>
+                <option value=" Hyundai"> Hyundai</option>
+                
+                <!-- Add other brands here -->
+            </select>
+        </div>
+        
+        <div>
+            <label for="model"style="font-size: large;"><b>Model:</b></label>
+            <select style="height: 50px; width: 250px;margin-bottom: 20px;border-radius: 10px;box-shadow: 5px 5px 5px rgb(67, 76, 92);border: none;"id="model" name="model" required>
+                <option value="">Select a model</option>
+                <option value="Corolla">Corolla</option>
+                <option value="Civic">Civic</option>
+                <option value="Focus">Focus</option>
+                <option value="320i">320i</option>
+                <option value="Malibu">Malibu</option>
+                <option value="C-Class">C-Class</option>
+                <option value="A4">A4</option>
+                <option value="Passat">Passat</option>
+                <option value="Altima">Altima</option>
+                <option value="Elantra">Elantra</option>
+                
+                <!-- Add other models here -->
+            </select>
+        </div>
+        
+        <div>
+            <label for="year"style="font-size: large;"><b>Year:</b></label>
+            <input type="number" style="height: 50px; width: 250px;margin-bottom: 20px;border-radius: 10px;box-shadow: 5px 5px 5px rgb(67, 76, 92);border: none;"id="year" name="year" placeholder="Enter year" required>
+        </div>
+        
+      
+        <div>
+            <label for="fuel_type"style="font-size: large;"><b>Fuel Type:</b></label>
+            <select style="height: 50px; width: 250px;margin-bottom: 20px;border-radius: 10px;box-shadow: 5px 5px 5px rgb(67, 76, 92);border: none;"id="fuel_type" name="fuel_type" required>
+                <option value="">Select a fuel type</option>
+                <option value="Gasoline">Gasoline</option>
+                <option value="Diesel">Diesel</option>
+                <option value="Electric">Electric</option>
+                <!-- Add other fuel types here -->
+            </select>
+        </div>
+        
+        <div>
+            <label for="transmission"style="font-size: large;"><b>Transmission:</b></label>
+            <select style="height: 50px; width: 250px;margin-bottom: 20px;border-radius: 10px;box-shadow: 5px 5px 5px rgb(67, 76, 92);border: none;"id="transmission" name="transmission" required>
+                <option value="">Select a transmission</option>
+                <option value="Automatic">Automatic</option>
+                <option value="Manual">Manual</option>
+                <!-- Add other transmission types here -->
+            </select>
+        </div>
+        
+        <button style="background-color: rgb(87, 129, 202);color: white;margin-left: 80px;height: 50px;width: 100px;border-radius: 20px;border: none;" type="submit">Get Price</button>
+    </form>
+{% block content %}
+{% endblock %}
+</body>
+</html>

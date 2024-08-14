@@ -1,0 +1,67 @@
+<!-- contact -->
+{% extends "nav.html" %}
+{% block content %}
+
+  
+{% load static %}
+<div id="contact" class="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title">
+                    <h2>Enter <strong class="black">Details </strong></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid padddd">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 padddd">
+        <div class="map_section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+
+                        <form class="main_form" method="post">
+                            {% csrf_token %}
+                            
+                            <div class="row">
+
+                                
+                                
+                                </div>
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                    <input class="form-control" placeholder="Sepal Length:{{LSepal}}" type="number" name="LSepal">
+                                </div>
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                    <input class="form-control" placeholder="Sepal Width:{{WSepal}}" type="number" name="WSepal" id="WSepal">
+                                </div>
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                    <input class="form-control" placeholder="Petal Length:{{LPetal}}" type="number" name="LPetal" id="LPetal">
+                                </div>
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                    <input class="form-control" placeholder="Petal Width:{{WPetal}}" type="number" name="WPetal" id="WPetal">
+                                </div>
+
+
+                                
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                    <button class="send" style="align-items: center;">Submit</button>
+                                </div>  
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div id="map">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% for i in messages %}
+<script>alert("{{i}}")</script>
+{% endfor %}
+
+{% endblock %}

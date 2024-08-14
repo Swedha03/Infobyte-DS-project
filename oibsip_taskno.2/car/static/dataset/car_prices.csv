@@ -1,0 +1,11 @@
+brand,model,year,fuel_type,transmission,price
+Toyota,Corolla,2020,Gasoline,Automatic,20000
+Honda,Civic,2019,Gasoline,Manual,18000
+Ford,Focus,2018,Gasoline,Automatic,17000
+Chevrolet,Malibu,2021,Gasoline,Automatic,22000
+BMW,320i,2020,Gasoline,Automatic,30000
+Audi,A4,2019,Gasoline,Automatic,28000
+Mercedes,C-Class,2021,Gasoline,Automatic,35000
+Volkswagen,Passat,2017,Diesel,Manual,16000
+Nissan,Altima,2018,Gasoline,Automatic,19000
+Hyundai,Elantra,2022,Gasoline,Automatic,21000
